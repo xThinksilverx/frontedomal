@@ -9,7 +9,7 @@ export default function Pedidos() {
   }, [])
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="container-branco">
       <h1>Pedidos</h1>
       <ul>
         {pedidos.map(order => (

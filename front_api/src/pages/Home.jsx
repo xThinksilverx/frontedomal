@@ -9,7 +9,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="container-branco">
       <h1>Produtos</h1>
       <ul>
         {produtos.map(produto => (

@@ -9,7 +9,7 @@ export default function Categorias() {
   }, [])
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="container-branco">
       <h1>Categorias</h1>
       <ul>
         {categorias.map(cat => (

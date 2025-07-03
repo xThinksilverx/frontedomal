@@ -21,7 +21,7 @@ export default function Register() {
   }
 
   return (
-    <div>
+    <div className="container-branco">
       <h2>Cadastro</h2>
       <form onSubmit={handleSubmit}>
         <input

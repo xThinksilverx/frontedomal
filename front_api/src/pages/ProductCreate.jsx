@@ -30,7 +30,7 @@ export default function ProductCreate() {
   }
 
   return (
-    <div>
+    <div className="container-branco">
       <h2>Cadastrar Produto</h2>
       <form onSubmit={handleSubmit}>
         <input

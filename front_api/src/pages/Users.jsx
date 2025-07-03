@@ -9,7 +9,7 @@ export default function Users() {
   }, [])
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="container-branco">
       <h1>Usuários</h1>
       <ul>
         {users.map(user => (

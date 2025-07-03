@@ -22,7 +22,7 @@ export default function Login({ setIsLogged }) {
   }
 
   return (
-    <div>
+    <div className="container-branco">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <input

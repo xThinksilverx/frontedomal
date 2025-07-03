@@ -19,7 +19,7 @@ export default function CategoryCreate() {
   }
 
   return (
-    <div>
+    <div className="container-branco">
       <h2>Cadastrar Categoria</h2>
       <form onSubmit={handleSubmit}>
         <input

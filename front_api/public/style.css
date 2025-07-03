@@ -1,0 +1,132 @@
+body {
+  background: linear-gradient(135deg, #23223a 0%, #8b8592 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.main-content-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container-branco {
+  background: #fff;
+  padding: 40px 32px 32px 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  min-width: 350px;
+  max-width: 600px; /* aumente aqui se quiser mais largo */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #23223a;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #23223a;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  color: #23223a;
+  padding: 10px 8px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  border-radius: 4px;
+  outline: none;
+}
+
+button[type="submit"] {
+  background: #b23a48;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #8d2c37;
+}
+
+
+.sidebar {
+  width: 300px;
+  background: #23223a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  padding: 0; 
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  width: 85%;
+  display: block;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  background: #3a2352;
+}
+
+.sidebar button {
+  background: #b23a48;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background 0.2s;
+}
+
+.sidebar button:hover {
+  background: #8d2c37;
+}

@@ -38,7 +38,7 @@ export default function OrderCreate() {
   }
 
   return (
-    <div>
+    <div className="container-branco">
       <h2>Cadastrar Pedido</h2>
       <form onSubmit={handleSubmit}>
         <label>Usuário:</label><br />

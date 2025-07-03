@@ -20,54 +20,49 @@ export default function App() {
     window.location.href = '/login'
   }
   return (
-    <Router>
-      <nav style={{ padding: 10 }}>
-        <Link to="/login" style={{ marginRight: 10 }}>Login</Link>
-        <Link to="/register" style={{ marginRight: 10 }}>Cadastro</Link>
-        {isLogged && (
-          <>
-            <Link to="/users" style={{ marginRight: 10 }}>Usuários</Link>
-            <Link to="/pedidos" style={{ marginRight: 10 }}>Pedidos</Link>
-            <Link to="/pedidos/novo" style={{ marginRight: 10 }}>Novo Pedido</Link>
-            <Link to="/categorias" style={{ marginRight: 10 }}>Categorias</Link>
-            <Link to="/categorias/nova" style={{ marginRight: 10 }}>Nova Categoria</Link>
-            <Link to="/home" style={{ marginRight: 10 }}>Produtos</Link>
-            <Link to="/produtos/novo" style={{ marginRight: 10 }}>Novo Produto</Link>
-            <button
-              style={{ marginLeft: 10 }}
-              onClick={handleLogout}
-            >
-              Sair
-            </button>
-          </>
-        )}
-      </nav>
-      <Routes>
-        <Route path="/" element={<Login setIsLogged={setIsLogged} />} />
-        <Route path="/login" element={<Login setIsLogged={setIsLogged} />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/home" element={
-          <PrivateRoute><Home /></PrivateRoute>
-        } />
-        <Route path="/users" element={
-          <PrivateRoute><Users /></PrivateRoute>
-        } />
-        <Route path="/categorias" element={
-          <PrivateRoute><Categorias /></PrivateRoute>
-        } />
-        <Route path="/categorias/nova" element={
-          <PrivateRoute><CategoryCreate /></PrivateRoute>
-        } />
-        <Route path="/pedidos" element={
-          <PrivateRoute><Pedidos /></PrivateRoute>
-        } />
-        <Route path="/pedidos/novo" element={
-          <PrivateRoute><OrderCreate /></PrivateRoute>
-        } />
-        <Route path="/produtos/novo" element={
-          <PrivateRoute><ProductCreate /></PrivateRoute>
-        } />
-      </Routes>
-    </Router>
-  )
+  <Router>
+    <div className="main-content-center">
+      {isLogged && (
+        <nav className="sidebar">
+          <Link to="/users">Usuários</Link>
+          <Link to="/pedidos">Pedidos</Link>
+          <Link to="/pedidos/novo">Novo Pedido</Link>
+          <Link to="/categorias">Categorias</Link>
+          <Link to="/categorias/nova">Nova Categoria</Link>
+          <Link to="/home">Produtos</Link>
+          <Link to="/produtos/novo">Novo Produto</Link>
+          <button onClick={handleLogout}>Sair</button>
+        </nav>
+      )}
+      <div style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Login setIsLogged={setIsLogged} />} />
+          <Route path="/login" element={<Login setIsLogged={setIsLogged} />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/home" element={
+            <PrivateRoute><Home /></PrivateRoute>
+          } />
+          <Route path="/users" element={
+            <PrivateRoute><Users /></PrivateRoute>
+          } />
+          <Route path="/categorias" element={
+            <PrivateRoute><Categorias /></PrivateRoute>
+          } />
+          <Route path="/categorias/nova" element={
+            <PrivateRoute><CategoryCreate /></PrivateRoute>
+          } />
+          <Route path="/pedidos" element={
+            <PrivateRoute><Pedidos /></PrivateRoute>
+          } />
+          <Route path="/pedidos/novo" element={
+            <PrivateRoute><OrderCreate /></PrivateRoute>
+          } />
+          <Route path="/produtos/novo" element={
+            <PrivateRoute><ProductCreate /></PrivateRoute>
+          } />
+        </Routes>
+      </div>
+    </div>
+  </Router>
+)
 }
