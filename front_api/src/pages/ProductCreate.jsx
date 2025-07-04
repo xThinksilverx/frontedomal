@@ -6,7 +6,7 @@ export default function ProductCreate() {
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
   const [categoriaId, setCategoriaId] = useState('')
-  const [categorias, setCategorias] = useState([]) // novo estado
+  const [categorias, setCategorias] = useState([])
   const [error, setError] = useState('')
   const navigate = useNavigate()
 

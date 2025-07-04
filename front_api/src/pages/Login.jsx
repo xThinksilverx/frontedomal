@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import api from '../services/api'
-import { useNavigate, Link } from 'react-router-dom' // Adicione o Link aqui
+import { useNavigate, Link } from 'react-router-dom'
 
 export default function Login({ setIsLogged }) {
   const [email, setEmail] = useState('')
